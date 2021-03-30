@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block head %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/style2.css' %}" type="text/css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
+<!------ Include the above in your HEAD tag ---------->
+{% block body %}
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+      <title>Profile</title>
+    <!-- Login Form -->
+    <div class="rapper fadeInDown">
+        <br></br>
+        <h1>Profile</h1>
+    <p>User name: </p><li class="fadeIn second" type="text">{{ user }}</li>
+    <p>First name: </p><li class="fadeIn second" type="text">{{ user.first_name }}</li>
+    <p>Last name: </p><li class="fadeIn second" type="text">{{ user.last_name }}</li>
+    <p>Email: </p><li class="fadeIn second" type="text">{{ user.email }}</li>
+
+        <br></br>
+    </div>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+        <a class="underlineHover" href="/accounts/profile/edit">Edit Profile</a>
+        <p></p>
+      <a class="underlineHover" href="/accounts/change-password">Change Password?</a>   &nbsp;    <a class="underlineHover" href="/accounts/reset-password">Reset Password?</a>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block head %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/style2.css' %}" type="text/css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
+<!------ Include the above in your HEAD tag ---------->
+{% block body %}
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+      <title>Sign up</title>
+    <!-- Login Form -->
+    <form method="post">
+        <br></br>
+        <h1>Sign up</h1>
+        {% csrf_token %}
+      <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
+      <input type="text" id="first_name" class="fadeIn second" name="first_name" placeholder="First Name">
+      <input type="text" id="last_name" class="fadeIn second" name="last_name" placeholder="Last Name">
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email">
+      <input type="password" id="password1" class="fadeIn third" name="password1" placeholder="Password">
+      <input type="password" id="password2" class="fadeIn third" name="password2" placeholder="Confirm Password">
+      <input type="submit" class="fadeIn fourth" value="Sign up">
+    </form>
+  </div>
+</div>
+{% endblock %}

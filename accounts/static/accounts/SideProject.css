@@ -1,0 +1,32 @@
+body{
+    background-image: url("Photos/203514.jpg");
+    background-color: green;
+    background-size: cover;
+}
+footer.SiteFooter{
+    background-color: #0d0d0d;
+    opacity: 75%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 30%;
+    text-align: center;
+
+}
+
+div.FooterContent{
+        color: white;
+
+}
+
+
+div.contact{
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+}
+div.copyright{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

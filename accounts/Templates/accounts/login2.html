@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block head %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
+<!------ Include the above in your HEAD tag ---------->
+{% block body %}
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+      <title>login</title>
+    <!-- Login Form -->
+    <form method="post">
+        <br></br>
+        <h1>Login</h1>
+        {% csrf_token %}
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="/accounts/reset-password">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

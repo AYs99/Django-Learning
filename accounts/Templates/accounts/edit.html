@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block head %}
+        <title>Profile Edit</title>
+{% endblock %}
+{% block body %}
+    <div align="center">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>
+{% endblock %}

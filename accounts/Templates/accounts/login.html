@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+<html>
+<head>
+    {% block head %}
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/style.css'%}" type="text/css">
+{% endblock %}
+</head>
+    <body>
+    {% block body %}
+        <div align="center">
+         <h1 >
+        Wellcome to my site
+        </h1>
+        </div>
+    <div class="card shadow p-3 mb-5 bg-white rounded mx-auto " style="width: 29rem;" align="center">
+    <div class="card-header shadow-sm p-3 mb-5 bg-white rounded ">
+       <h2>
+        Login
+        </h2>
+    </div>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+    </div>
+{% endblock %}
+</body>
+
+</html>

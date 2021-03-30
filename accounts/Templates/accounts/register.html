@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="card shadow p-3 mb-5 bg-white rounded mx-auto" style="width: 29rem;" align="center">
+    <div class="card-header shadow-sm p-3 mb-5 bg-white rounded">
+        <h1>Register</h1>
+        </div>
+
+
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+            <button type="submit" class="btn btn-success">Register</button>
+        </form>
+    </div>
+{% endblock %}

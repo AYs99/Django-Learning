@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block head %}
+        <title>Profile</title>
+{% endblock %}
+{% block body %}
+    <div align="center">
+     <div class="card" style="width: 30rem;">
+  <div class="card-header">
+    <h1>Profile</h1>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> user name: {{ user }}</li>
+    <li class="list-group-item">first name: {{ user.first_name }}</li>
+    <li class="list-group-item">last name: {{ user.last_name }}</li>
+    <li class="list-group-item"> email: {{ user.email }}</li>
+  </ul>
+</div>
+    <p>
+        <a class="btn btn-success" href="../profile/edit">edit</a>
+    </p>
+    <a class="btn btn-danger" href="/accounts/change-password">Change Password</a>     <a class="btn btn-danger" href="/accounts/reset-password">Reset Password</a>
+    </div>
+{% endblock %}

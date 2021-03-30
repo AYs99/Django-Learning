@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+<html>
+<head>
+    {% block head %}
+    <title>Logout</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/style.css'%}" type="text/css">
+{% endblock %}
+</head>
+    {% block body %}
+        <br></br>
+     <div class="jumbotron jumbotron-fluid mx-auto" style="width: 70rem; height: 50rem">
+  <div align="center">
+    <h1 class="display-4">Good-Bye</h1>
+    <p class="lead">You logged out</p>
+  </div>
+{% endblock %}
+
+
+</html>

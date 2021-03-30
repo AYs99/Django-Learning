@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block head %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/style2.css' %}" type="text/css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
+<!------ Include the above in your HEAD tag ---------->
+{% block body %}
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+      <title>Profile Edit</title>
+    <!-- Login Form -->
+    <form method="post">
+        <br></br>
+        <h1>Edit Profile</h1>
+        {% csrf_token %}
+      <P>Email Address:</P><input type="email" id="email" class="fadeIn second" name="email" placeholder="Email" value="{{ user.email }}">
+      <P>First Name:</P><input type="text" id="first_name" class="fadeIn third" name="first_name" placeholder="First name" value="{{ user.first_name }}">
+      <P>Last Name:</P><input type="text" id="last_name" class="fadeIn third" name="last_name" placeholder="Last name" value="{{ user.last_name }}">
+      <input type="submit" class="fadeIn fourth" value="Edit">
+    </form>
+  </div>
+</div>
+{% endblock %}
